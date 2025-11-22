@@ -1,0 +1,679 @@
+[00:00:02.661] Server  LOG     
+[00:00:02.662] Server  LOG        We detected TypeScript in your project and created a tsconfig.json file for you.
+[00:00:03.135] Server  LOG      ✓ Ready in 2.2s
+[00:00:26.982] Server  LOG      ○ Compiling / ...
+[00:00:29.611] Server  ERROR    ⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:33.064] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:33.949] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:33.949] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:33.949] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:33.949] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:34.118] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:34.118] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:34.118] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:34.118] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.151] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.151] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.151] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.151] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.268] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.268] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.268] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.268] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.912] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.912] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.912] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.912] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:18.360] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:18.360] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:18.360] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:18.360] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:49.167] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/about'
+  2 | import Header from "@/components/header"
+  3 | import Hero from "@/components/hero"
+> 4 | import About from "@/components/about"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Footer from "@/components/footer"
+  6 |
+  7 | export default function Home() {
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:49.167] Browser ERROR   ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/footer'
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+> 5 | import Footer from "@/components/footer"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Home() {
+  8 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:49.167] Browser ERROR   ./app/page.tsx:2:1
+Module not found: Can't resolve '@/components/header'
+  1 | "use client"
+> 2 | import Header from "@/components/header"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Hero from "@/components/hero"
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:49.167] Browser ERROR   ./app/page.tsx:3:1
+Module not found: Can't resolve '@/components/hero'
+  1 | "use client"
+  2 | import Header from "@/components/header"
+> 3 | import Hero from "@/components/hero"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import About from "@/components/about"
+  5 | import Footer from "@/components/footer"
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
