@@ -17,26 +17,28 @@ let ibmPublicKeyCache: Buffer | null = null;
 /**
  * Load RSA keys from the filesystem or environment variables
  * Keys are cached after first load for performance
+ * 
+ * Priority:
+ * 1. Environment variables (CLIENT_PRIVATE_KEY, IBM_PUBLIC_KEY)
+ * 2. Files in configured directory
  */
 function loadKeys(): { privateKey: Buffer; ibmPublicKey: Buffer } {
   if (privateKeyCache && ibmPublicKeyCache) {
     return { privateKey: privateKeyCache, ibmPublicKey: ibmPublicKeyCache };
   }
 
-  // In production, try to load from environment variables first (for Vercel, etc.)
-  if (process.env.NODE_ENV === 'production') {
-    const privateKeyEnv = process.env.CLIENT_PRIVATE_KEY;
-    const ibmPublicKeyEnv = process.env.IBM_PUBLIC_KEY;
-    
-    if (privateKeyEnv && ibmPublicKeyEnv) {
-      privateKeyCache = Buffer.from(privateKeyEnv, 'utf-8');
-      ibmPublicKeyCache = Buffer.from(ibmPublicKeyEnv, 'utf-8');
-      console.log('✓ Keys loaded from environment variables');
-      return { privateKey: privateKeyCache, ibmPublicKey: ibmPublicKeyCache };
-    }
+  // OPTION 1: Try to load from environment variables first (recommended for Vercel/serverless)
+  const privateKeyEnv = process.env.CLIENT_PRIVATE_KEY;
+  const ibmPublicKeyEnv = process.env.IBM_PUBLIC_KEY;
+  
+  if (privateKeyEnv && ibmPublicKeyEnv) {
+    privateKeyCache = Buffer.from(privateKeyEnv, 'utf-8');
+    ibmPublicKeyCache = Buffer.from(ibmPublicKeyEnv, 'utf-8');
+    console.log('✓ Keys loaded from environment variables');
+    return { privateKey: privateKeyCache, ibmPublicKey: ibmPublicKeyCache };
   }
 
-  // Use environment variables or fallback to defaults
+  // OPTION 2: Fall back to loading from files (recommended for local dev, Docker, traditional servers)
   const keysDir = path.join(
     process.cwd(), 
     process.env.KEYS_DIRECTORY || 'keys'
@@ -64,7 +66,9 @@ function loadKeys(): { privateKey: Buffer; ibmPublicKey: Buffer } {
     console.error('  - Private key path:', privateKeyPath);
     console.error('  - IBM public key path:', ibmPublicKeyPath);
     throw new Error(
-      'Failed to load RSA keys. Please ensure keys exist in the configured directory or set CLIENT_PRIVATE_KEY and IBM_PUBLIC_KEY environment variables. ' +
+      'Failed to load RSA keys. Please either:\n' +
+      '1. Set CLIENT_PRIVATE_KEY and IBM_PUBLIC_KEY environment variables, OR\n' +
+      '2. Ensure key files exist in the configured directory.\n' +
       'Run wxo-security-config.sh to generate keys.'
     );
   }
