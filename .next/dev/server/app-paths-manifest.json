@@ -1,4 +1,0 @@
-{
-  "/api/jwt/create/route": "app/api/jwt/create/route.js",
-  "/page": "app/page.js"
-}
