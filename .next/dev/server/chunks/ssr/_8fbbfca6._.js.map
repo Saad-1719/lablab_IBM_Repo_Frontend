@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///E:/Lab%20Lab%20AI/lablab_IBM_Repo_Frontend/app/page.tsx"],"sourcesContent":["\"use client\"\nimport Header from \"@/components/header\"\nimport Hero from \"@/components/hero\"\nimport About from \"@/components/about\"\nimport Footer from \"@/components/footer\"\n\nexport default function Home() {\n  return (\n    <main className=\"w-full bg-background\">\n      <Header />\n      <Hero />\n      <About />\n      <Footer />\n    </main>\n  )\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;;;;AAMe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;;0BACd,8OAAC;;;;;0BACD,8OAAC;;;;;0BACD,8OAAC;;;;;0BACD,8OAAC;;;;;;;;;;;AAGP"}},
-    {"offset": {"line": 70, "column": 0}, "map": {"version":3,"sources":["file:///E:/Lab%20Lab%20AI/lablab_IBM_Repo_Frontend/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
-}

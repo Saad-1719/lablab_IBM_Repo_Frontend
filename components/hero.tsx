@@ -1,6 +1,10 @@
 "use client"
 
 export default function Hero() {
+  const handleCTAClick = () => {
+    alert("Please use the chat widget in the bottom right to interact with the agent.")
+  }
+
   return (
     <section className="w-full bg-white">
       <div className="relative w-full h-96 sm:h-[500px] overflow-hidden bg-gradient-to-b from-primary to-primary/80 animate-fade-in-up">
@@ -26,10 +30,16 @@ export default function Hero() {
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 bg-white animate-fade-in-up">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg text-foreground text-pretty leading-relaxed">
+          <p className="text-lg text-foreground text-pretty leading-relaxed mb-8">
             Welcome to our comprehensive procurement platform. We provide intelligent solutions to help manage your
             sourcing and purchasing needs efficiently.
           </p>
+          <button
+            onClick={handleCTAClick}
+            className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Start Assistant
+          </button>
         </div>
       </div>
     </section>

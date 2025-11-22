@@ -1,14 +1,19 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "lablab-ibm-procurement-assistant",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
-    "start": "next start"
+    "type-check": "tsc --noEmit",
+    "health": "curl http://localhost:3000/api/health",
+    "test-jwt": "curl http://localhost:3000/api/jwt/create"
   },
   "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
@@ -62,9 +67,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^9.0.8",
     "postcss": "^8.5",
     "tailwindcss": "^4.1.9",
     "tw-animate-css": "1.3.3",

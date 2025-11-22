@@ -1,1 +1,74 @@
-node_modules
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js build output
+/.next
+/out
+
+# production build
+/build
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# CRITICAL: RSA Keys - NEVER commit these!
+/keys/*.key
+/keys/*.pub
+/keys/*.pem
+!/keys/README.md
+!/keys/.gitkeep
+
+# Watson Orchestrate Security Config - NEVER commit these!
+/wxo_security_config/*.pem
+/wxo_security_config/*.txt
+!/wxo_security_config/README.md
+
+# Legacy backend keys (if not migrated)
+/backend/keys/*.key
+/backend/keys/*.pub
+/backend/keys/*.pem
+
+# Vercel
+.vercel
+
+# testing
+/coverage
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# TurboRepo
+.turbo
+
+# Misc
+*.log
+
+.env.example
+.env.production.example
