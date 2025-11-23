@@ -73,7 +73,7 @@ export default function CSVComponent() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="space-y-6">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 items-center justify-center">
           <span className="flex items-center space-x-2.5">
           <h1 className="text-3xl font-bold tracking-tight">CSV Data</h1>
           <a className="text-xs underline text-red-500" href="https://www.kaggle.com/datasets/shahriarkabir/procurement-kpi-analysis-dataset">Link</a>

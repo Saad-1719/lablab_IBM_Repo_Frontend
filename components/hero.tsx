@@ -1,11 +1,5 @@
-"use client"
-
-import Page from "./csv-component"
-
 export default function Hero() {
-  // const handleCTAClick = () => {
-  //   alert("Please use the chat widget in the bottom right to interact with the agent.")
-  // }
+
 
   return (
     <section className="w-full bg-white">
@@ -29,21 +23,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 bg-white animate-fade-in-up">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg text-foreground text-pretty leading-relaxed mb-8">
-            Sample Data on which we are using agent
-          </p>
-          <button
-            onClick={handleCTAClick}
-            className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl"
-          >
-            Start Assistant
-          </button>
-        </div>
-      </div> */}
-      {/* <Page/> */}
     </section>
   )
 }

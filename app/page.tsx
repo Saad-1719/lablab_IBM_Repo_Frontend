@@ -4,12 +4,14 @@ import Hero from "../components/hero"
 import About from "../components/about"
 import Footer from "../components/footer"
 import Page from "@/components/csv-component"
+import QNA from "@/components/qna"
 export default function Home() {
   return (
     <main className="w-full bg-background">
       <Header />
       <Hero />
       <About />
+      <QNA/>
       <Page/>
       <Footer />
     </main>
