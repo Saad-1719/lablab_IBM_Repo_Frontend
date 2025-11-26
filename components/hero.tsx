@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-r from-primary/90 to-primary/70"></div>
         <div className="absolute inset-0 flex items-center justify-start max-w-7xl mx-auto">
           <div className="text-left text-white px-4 sm:px-12 lg:px-16 animate-scale-in max-w-2xl">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 text-balance leading-tight">Procurement Hub</h1>
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 text-balance leading-tight">Supplier IQ</h1>
             <p className="text-xl sm:text-2xl font-semibold mb-4 opacity-95 text-balance">
               Empowering Organizations with Smart Orchestration
             </p>
